@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Art Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #eee;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px 30px;
+            border-bottom: 2px solid #0f3460;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4fc3f7;
+            font-size: 1.8em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .menu {
+            width: 280px;
+            background: rgba(0, 0, 0, 0.4);
+            border-right: 2px solid #0f3460;
+            overflow-y: auto;
+        }
+
+        .menu-item {
+            padding: 15px 20px;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .menu-item:hover {
+            background: rgba(79, 195, 247, 0.2);
+        }
+
+        .menu-item.active {
+            background: rgba(79, 195, 247, 0.3);
+            border-left: 4px solid #4fc3f7;
+        }
+
+        .canvas {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            overflow: auto;
+        }
+
+        .ascii-art {
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            line-height: 1.2;
+            white-space: pre;
+            text-align: left;
+            background: transparent;
+            padding: 30px;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 30px;
+            border-top: 2px solid #0f3460;
+            text-align: center;
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        .color-yellow { color: #ffd93d; }
+        .color-cyan { color: #6bcfff; }
+        .color-blue { color: #4fc3f7; }
+        .color-green { color: #6ddc6d; }
+        .color-magenta { color: #ff6bcf; }
+        .color-white { color: #ffffff; }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .menu {
+                width: 100%;
+                max-height: 200px;
+            }
+            .ascii-art {
+                font-size: 12px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Terminal Art Gallery</h1>
+        <div class="subtitle">Select an object to view</div>
+    </header>
+
+    <div class="container">
+        <div class="menu" id="menu"></div>
+        <div class="canvas">
+            <div class="ascii-art" id="ascii-art">Select an object from the menu</div>
+        </div>
+    </div>
+
+    <footer>
+        Press on any item to view • Built with ❤️
+    </footer>
+
+    <script>
+        const artGallery = {
+            'Dog': {
+                art: `   //  \\___
+  (((  @@@\\___
+  //      OO
+ //__((__//`,
+                color: 'yellow'
+            },
+            'Cat': {
+                art: `   /\\_/\\
+  ( o.o )
+   > ^ <
+  /|   |\\`,
+                color: 'white'
+            },
+            'Bird': {
+                art: `    ____
+  >(o )__
+   (  ._>
+    \`--`,
+                color: 'blue'
+            },
+            'Fish': {
+                art: `>>><<<(((((((°°°>>>`,
+                color: 'cyan'
+            },
+            'Butterfly': {
+                art: `  (\\_/)
+ (o.o)
+  >*<`,
+                color: 'magenta'
+            },
+            'Rabbit': {
+                art: `    ((\\((\\
+    ((  -.- ))
+    oo__("")("")`,
+                color: 'white'
+            },
+            'Snake': {
+                art: `      ,,,---
+,,,---'''
+\`\`\`===eee`,
+                color: 'green'
+            },
+            'Frog': {
+                art: `   @..@
+  (----)
+ ( >__< )
+ ^^  ~~  ^^`,
+                color: 'green'
+            },
+            'Owl': {
+                art: `   ,___,
+  (O,O)
+  (   )
+   ---`,
+                color: 'yellow'
+            }
+        };
+
+        const menuEl = document.getElementById('menu');
+        const artEl = document.getElementById('ascii-art');
+
+        // Populate menu
+        Object.keys(artGallery).forEach((name, index) => {
+            const item = document.createElement('div');
+            item.className = 'menu-item' + (index === 0 ? ' active' : '');
+            item.textContent = `🎨 ${name}`;
+            item.onclick = () => selectArt(name, item);
+            menuEl.appendChild(item);
+        });
+
+        function selectArt(name, element) {
+            // Remove active class from all items
+            document.querySelectorAll('.menu-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Add active class to selected item
+            element.classList.add('active');
+
+            // Update art
+            const selected = artGallery[name];
+            artEl.textContent = selected.art;
+            artEl.className = `ascii-art color-${selected.color}`;
+        }
+
+        // Show first item by default
+        const firstName = Object.keys(artGallery)[0];
+        artEl.textContent = artGallery[firstName].art;
+        artEl.className = `ascii-art color-${artGallery[firstName].color}`;
+    </script>
+</body>
+</html>
