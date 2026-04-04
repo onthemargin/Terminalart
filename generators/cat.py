@@ -13,7 +13,7 @@ class CatGenerator(AsciiGenerator):
         return "A cute cat"
 
     def generate(self) -> str:
-        return """   /\\_/\\
+        return """[white]   /\\_/\\
   ( o.o )
    > ^ <
-  /|   |\\"""
+  /|   |\\[/white]"""
