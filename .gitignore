@@ -51,3 +51,8 @@ canvas.py
 menu.py
 cli.py
 terminalart/
+
+# Claude Code
+CLAUDE.md
+.claude/
+.claudeignore
