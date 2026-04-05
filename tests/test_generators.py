@@ -61,6 +61,21 @@ class TestGeneratorInterface:
             f"like [color]...[/color]"
         )
 
+    def test_fun_facts_returns_list(self, generator):
+        facts = generator.fun_facts
+        assert isinstance(facts, list)
+
+    def test_fun_facts_has_at_least_three(self, generator):
+        facts = generator.fun_facts
+        assert len(facts) >= 3, (
+            f"{generator.name} should have at least 3 fun facts"
+        )
+
+    def test_fun_facts_are_non_empty_strings(self, generator):
+        for fact in generator.fun_facts:
+            assert isinstance(fact, str)
+            assert len(fact) > 0
+
 
 class TestCatGenerator:
     def test_name(self):
