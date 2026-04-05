@@ -68,13 +68,32 @@
             border-left: 4px solid #4fc3f7;
         }
 
+        .menu-item.draw-menu-item {
+            border-top: 2px solid #0f3460;
+            color: #ff6bcf;
+            font-weight: bold;
+        }
+
+        .menu-item.draw-menu-item.active {
+            border-left: 4px solid #ff6bcf;
+            background: rgba(255, 107, 207, 0.2);
+        }
+
         .canvas {
             flex: 1;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             padding: 40px;
             overflow: auto;
+        }
+
+        #gallery-view {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
         }
 
         .ascii-art {
@@ -85,6 +104,170 @@
             text-align: left;
             background: transparent;
             padding: 30px;
+        }
+
+        .fun-fact {
+            font-size: 0.95em;
+            color: #ffd93d;
+            max-width: 500px;
+            text-align: center;
+            line-height: 1.5;
+            padding: 12px 20px;
+            background: rgba(255, 217, 61, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 217, 61, 0.25);
+            display: none;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .animate-btn {
+            display: none;
+            padding: 10px 24px;
+            font-family: 'Courier New', monospace;
+            font-size: 1em;
+            background: rgba(79, 195, 247, 0.2);
+            color: #4fc3f7;
+            border: 2px solid #4fc3f7;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .animate-btn:hover {
+            background: rgba(79, 195, 247, 0.35);
+            transform: scale(1.05);
+        }
+
+        .animate-btn.active {
+            background: rgba(255, 107, 207, 0.2);
+            color: #ff6bcf;
+            border-color: #ff6bcf;
+        }
+
+        /* --- Draw Your Own --- */
+        #draw-panel {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+        }
+
+        .draw-title {
+            font-size: 1.3em;
+            color: #ff6bcf;
+        }
+
+        .draw-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .toolbar-group {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            padding: 4px 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+        }
+
+        .toolbar-label {
+            font-size: 0.8em;
+            color: #888;
+            margin-right: 4px;
+        }
+
+        .char-btn {
+            width: 32px;
+            height: 32px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            background: rgba(255, 255, 255, 0.1);
+            color: #eee;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.15s ease;
+        }
+
+        .char-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .char-btn.selected {
+            border-color: #4fc3f7;
+            background: rgba(79, 195, 247, 0.3);
+        }
+
+        .draw-color-btn {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .draw-color-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .draw-color-btn.selected {
+            border-color: #fff;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+
+        .action-btn {
+            padding: 8px 16px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            background: rgba(255, 255, 255, 0.1);
+            color: #eee;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .action-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .draw-canvas {
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.15;
+            white-space: pre;
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid #0f3460;
+            border-radius: 8px;
+            padding: 12px;
+            cursor: crosshair;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .grid-cell {
+            display: inline-block;
+            width: 1ch;
+            height: 1.15em;
+            text-align: center;
+        }
+
+        .grid-cell:hover {
+            background: rgba(255, 255, 255, 0.15);
         }
 
         footer {
@@ -115,24 +298,75 @@
                 font-size: 12px;
                 padding: 20px;
             }
+            .draw-canvas {
+                font-size: 11px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Terminal Art Gallery</h1>
-        <div class="subtitle">Select an object to view</div>
+        <div class="subtitle">Select an animal to view -- or draw your own!</div>
     </header>
 
     <div class="container">
         <div class="menu" id="menu"></div>
         <div class="canvas">
-            <div class="ascii-art" id="ascii-art">Select an object from the menu</div>
+            <div id="gallery-view">
+                <div class="ascii-art" id="ascii-art">Select an object from the menu</div>
+                <div class="fun-fact" id="fun-fact"></div>
+                <div class="controls">
+                    <button class="animate-btn" id="animate-btn">&#9654; Animate</button>
+                </div>
+            </div>
+
+            <div id="draw-panel">
+                <div class="draw-title">Draw Your Own Animal!</div>
+
+                <div class="draw-toolbar">
+                    <div class="toolbar-group">
+                        <span class="toolbar-label">Brush:</span>
+                        <button class="char-btn selected" data-char="*">*</button>
+                        <button class="char-btn" data-char="#">#</button>
+                        <button class="char-btn" data-char="@">@</button>
+                        <button class="char-btn" data-char="O">O</button>
+                        <button class="char-btn" data-char="o">o</button>
+                        <button class="char-btn" data-char=".">.</button>
+                        <button class="char-btn" data-char="-">-</button>
+                        <button class="char-btn" data-char="/">/</button>
+                        <button class="char-btn" data-char="\">\</button>
+                        <button class="char-btn" data-char="|">|</button>
+                        <button class="char-btn" data-char="_">_</button>
+                        <button class="char-btn" data-char="^">^</button>
+                        <button class="char-btn" data-char="~">~</button>
+                        <button class="char-btn" data-char=" ">&nbsp;</button>
+                    </div>
+
+                    <div class="toolbar-group">
+                        <span class="toolbar-label">Color:</span>
+                        <button class="draw-color-btn selected" data-color="#4fc3f7" style="background:#4fc3f7"></button>
+                        <button class="draw-color-btn" data-color="#ffd93d" style="background:#ffd93d"></button>
+                        <button class="draw-color-btn" data-color="#6ddc6d" style="background:#6ddc6d"></button>
+                        <button class="draw-color-btn" data-color="#ff6bcf" style="background:#ff6bcf"></button>
+                        <button class="draw-color-btn" data-color="#ffffff" style="background:#ffffff"></button>
+                        <button class="draw-color-btn" data-color="#ff6b6b" style="background:#ff6b6b"></button>
+                        <button class="draw-color-btn" data-color="#ffa94d" style="background:#ffa94d"></button>
+                    </div>
+
+                    <div class="toolbar-group">
+                        <button class="action-btn" id="clear-grid">Clear</button>
+                        <button class="action-btn" id="copy-art">Copy Art</button>
+                    </div>
+                </div>
+
+                <div class="draw-canvas" id="draw-grid"></div>
+            </div>
         </div>
     </div>
 
     <footer>
-        Press on any item to view • Built with ❤️
+        Click any animal to view &bull; Press Animate to bring it to life &bull; Built with &#10084;&#65039;
     </footer>
 
     <script src="main.js"></script>

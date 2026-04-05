@@ -29,3 +29,8 @@ class AsciiGenerator(ABC):
     def description(self) -> str:
         """Optional description of the ASCII art."""
         return ""
+
+    @property
+    def fun_facts(self) -> list[str]:
+        """Fun facts about this animal for kids."""
+        return []
