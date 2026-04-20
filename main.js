@@ -268,15 +268,11 @@ const artGallery = {
 const menuEl = document.getElementById('menu');
 const artEl = document.getElementById('ascii-art');
 const factEl = document.getElementById('fun-fact');
-const animateBtn = document.getElementById('animate-btn');
-const drawBtn = document.getElementById('draw-btn');
 const drawPanel = document.getElementById('draw-panel');
 const drawGrid = document.getElementById('draw-grid');
 const galleryView = document.getElementById('gallery-view');
 
 let currentAnimal = null;
-let animationInterval = null;
-let isAnimating = false;
 
 // --- Draw Your Own state ---
 const GRID_ROWS = 16;
@@ -304,7 +300,6 @@ menuEl.appendChild(drawMenuItem);
 
 // --- Gallery ---
 function selectArt(name, element) {
-    stopAnimation();
     hideDrawMode();
 
     document.querySelectorAll('.menu-item').forEach(item => {
@@ -322,59 +317,12 @@ function selectArt(name, element) {
     factEl.textContent = `💡 ${fact}`;
     factEl.style.display = 'block';
 
-    // Show controls
-    animateBtn.style.display = 'inline-block';
-    animateBtn.textContent = '▶ Animate';
-    animateBtn.classList.remove('active');
     galleryView.style.display = 'flex';
     drawPanel.style.display = 'none';
 }
 
-// --- Animation ---
-animateBtn.addEventListener('click', () => {
-    if (isAnimating) {
-        stopAnimation();
-    } else {
-        startAnimation();
-    }
-});
-
-function startAnimation() {
-    if (!currentAnimal) return;
-    const selected = artGallery[currentAnimal];
-    if (!selected.frames || selected.frames.length === 0) return;
-
-    isAnimating = true;
-    animateBtn.textContent = '⏸ Stop';
-    animateBtn.classList.add('active');
-
-    let frameIndex = 0;
-    animationInterval = setInterval(() => {
-        artEl.textContent = selected.frames[frameIndex];
-        frameIndex = (frameIndex + 1) % selected.frames.length;
-    }, 400);
-}
-
-function stopAnimation() {
-    if (animationInterval) {
-        clearInterval(animationInterval);
-        animationInterval = null;
-    }
-    isAnimating = false;
-    if (animateBtn) {
-        animateBtn.textContent = '▶ Animate';
-        animateBtn.classList.remove('active');
-    }
-    // Restore static art
-    if (currentAnimal) {
-        artEl.textContent = artGallery[currentAnimal].art;
-    }
-}
-
 // --- Draw Your Own ---
 function showDrawMode(element) {
-    stopAnimation();
-
     document.querySelectorAll('.menu-item').forEach(item => {
         item.classList.remove('active');
     });
@@ -384,7 +332,6 @@ function showDrawMode(element) {
     galleryView.style.display = 'none';
     drawPanel.style.display = 'flex';
     factEl.style.display = 'none';
-    animateBtn.style.display = 'none';
 
     initGrid();
 }
@@ -481,4 +428,3 @@ artEl.className = `ascii-art color-${artGallery[firstName].color}`;
 const firstFact = artGallery[firstName].funFacts[Math.floor(Math.random() * artGallery[firstName].funFacts.length)];
 factEl.textContent = `💡 ${firstFact}`;
 factEl.style.display = 'block';
-animateBtn.style.display = 'inline-block';

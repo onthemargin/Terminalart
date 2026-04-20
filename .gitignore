@@ -56,3 +56,6 @@ terminalart/
 CLAUDE.md
 .claude/
 .claudeignore
+
+# Local experiment artifacts
+experiments/
