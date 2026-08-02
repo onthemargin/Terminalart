@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- background -->
+  <rect x="0" y="0" width="1024" height="1024" fill="#FFFFFF"/>
+
+  <defs>
+    <!-- Right-side wing pair; mirrored for the left -->
+    <g id="wings">
+      <!-- upper wing -->
+      <path d="M 540 450
+               C 560 330, 660 210, 780 190
+               C 880 175, 940 240, 935 330
+               C 930 430, 850 520, 740 555
+               C 660 580, 575 555, 540 505 Z"
+            fill="#FF8FB4" stroke="#33202E" stroke-width="14" stroke-linejoin="round"/>
+      <!-- upper wing inner patch -->
+      <path d="M 590 448
+               C 608 360, 685 268, 775 254
+               C 843 244, 882 290, 876 352
+               C 869 424, 810 484, 730 510
+               C 668 529, 610 505, 590 470 Z"
+            fill="#FFC9DC"/>
+      <!-- lower wing -->
+      <path d="M 545 545
+               C 620 560, 730 590, 785 665
+               C 830 728, 800 800, 725 810
+               C 645 820, 570 755, 548 660 Z"
+            fill="#FFB35C" stroke="#33202E" stroke-width="14" stroke-linejoin="round"/>
+      <!-- lower wing inner patch -->
+      <path d="M 592 590
+               C 650 605, 715 630, 750 680
+               C 778 722, 758 762, 712 768
+               C 660 774, 610 725, 596 660 Z"
+            fill="#FFD9A0"/>
+      <!-- dots -->
+      <circle cx="800" cy="330" r="30" fill="#FFFFFF" stroke="#33202E" stroke-width="10"/>
+      <circle cx="690" cy="425" r="20" fill="#FF5C8A" stroke="#33202E" stroke-width="10"/>
+      <circle cx="690" cy="700" r="18" fill="#FFFFFF" stroke="#33202E" stroke-width="10"/>
+    </g>
+  </defs>
+
+  <use href="#wings"/>
+  <use href="#wings" transform="matrix(-1 0 0 1 1024 0)"/>
+
+  <!-- antennae -->
+  <path d="M 487 258 C 460 210, 420 180, 380 172" fill="none" stroke="#33202E" stroke-width="14" stroke-linecap="round"/>
+  <path d="M 537 258 C 564 210, 604 180, 644 172" fill="none" stroke="#33202E" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="374" cy="168" r="22" fill="#FF5C8A" stroke="#33202E" stroke-width="12"/>
+  <circle cx="650" cy="168" r="22" fill="#FF5C8A" stroke="#33202E" stroke-width="12"/>
+
+  <!-- body -->
+  <rect x="462" y="330" width="100" height="420" rx="50" fill="#9B7EDE" stroke="#33202E" stroke-width="14"/>
+  <!-- body stripes -->
+  <path d="M 466 470 L 558 470" stroke="#33202E" stroke-width="10" stroke-linecap="round"/>
+  <path d="M 466 560 L 558 560" stroke="#33202E" stroke-width="10" stroke-linecap="round"/>
+  <path d="M 470 650 L 554 650" stroke="#33202E" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- head -->
+  <circle cx="512" cy="300" r="80" fill="#B49BEF" stroke="#33202E" stroke-width="14"/>
+
+  <!-- face -->
+  <circle cx="482" cy="292" r="14" fill="#33202E"/>
+  <circle cx="542" cy="292" r="14" fill="#33202E"/>
+  <circle cx="487" cy="287" r="5" fill="#FFFFFF"/>
+  <circle cx="547" cy="287" r="5" fill="#FFFFFF"/>
+  <path d="M 492 322 Q 512 340, 532 322" fill="none" stroke="#33202E" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="452" cy="320" r="12" fill="#FF9EBB"/>
+  <circle cx="572" cy="320" r="12" fill="#FF9EBB"/>
+</svg>

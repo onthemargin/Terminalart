@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- background -->
+  <rect x="0" y="0" width="1024" height="1024" fill="#FFFFFF"/>
+
+  <g stroke="#3B2B27" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <!-- ears -->
+    <g>
+      <ellipse cx="408" cy="240" rx="66" ry="160" fill="#FBF1E4" transform="rotate(-10 408 240)"/>
+      <ellipse cx="408" cy="252" rx="34" ry="112" fill="#FFB8CC" stroke="none" transform="rotate(-10 408 252)"/>
+      <ellipse cx="616" cy="240" rx="66" ry="160" fill="#FBF1E4" transform="rotate(10 616 240)"/>
+      <ellipse cx="616" cy="252" rx="34" ry="112" fill="#FFB8CC" stroke="none" transform="rotate(10 616 252)"/>
+    </g>
+
+    <!-- body -->
+    <ellipse cx="512" cy="760" rx="200" ry="160" fill="#FBF1E4"/>
+    <!-- belly -->
+    <ellipse cx="512" cy="790" rx="118" ry="96" fill="#FFF9F0" stroke="none"/>
+
+    <!-- feet -->
+    <ellipse cx="424" cy="892" rx="84" ry="46" fill="#FBF1E4"/>
+    <ellipse cx="600" cy="892" rx="84" ry="46" fill="#FBF1E4"/>
+
+    <!-- arms -->
+    <ellipse cx="352" cy="740" rx="52" ry="72" fill="#FBF1E4" transform="rotate(18 352 740)"/>
+    <ellipse cx="672" cy="740" rx="52" ry="72" fill="#FBF1E4" transform="rotate(-18 672 740)"/>
+
+    <!-- head -->
+    <ellipse cx="512" cy="470" rx="252" ry="218" fill="#FBF1E4"/>
+
+    <!-- cheeks -->
+    <ellipse cx="358" cy="546" rx="44" ry="30" fill="#FFC4D4" stroke="none"/>
+    <ellipse cx="666" cy="546" rx="44" ry="30" fill="#FFC4D4" stroke="none"/>
+
+    <!-- eyes -->
+    <g stroke="none" fill="#3B2B27">
+      <circle cx="418" cy="466" r="32"/>
+      <circle cx="606" cy="466" r="32"/>
+    </g>
+    <g stroke="none" fill="#FFFFFF">
+      <circle cx="428" cy="454" r="11"/>
+      <circle cx="616" cy="454" r="11"/>
+      <circle cx="409" cy="476" r="5"/>
+      <circle cx="597" cy="476" r="5"/>
+    </g>
+
+    <!-- nose -->
+    <path d="M 512 512 L 540 512 Q 550 512 544 522 L 520 548 Q 512 556 504 548 L 480 522 Q 474 512 484 512 Z" fill="#FF8FAE" stroke-width="10"/>
+
+    <!-- mouth -->
+    <path d="M 512 556 L 512 578" fill="none" stroke-width="10"/>
+    <path d="M 512 578 Q 486 604 462 582" fill="none" stroke-width="10"/>
+    <path d="M 512 578 Q 538 604 562 582" fill="none" stroke-width="10"/>
+
+    <!-- teeth -->
+    <rect x="492" y="596" width="40" height="34" rx="8" fill="#FFFFFF" stroke-width="9"/>
+    <path d="M 512 598 L 512 628" fill="none" stroke-width="7"/>
+
+    <!-- whiskers -->
+    <g fill="none" stroke-width="8">
+      <path d="M 330 500 Q 280 492 246 476"/>
+      <path d="M 332 534 Q 282 538 246 552"/>
+      <path d="M 694 500 Q 744 492 778 476"/>
+      <path d="M 692 534 Q 742 538 778 552"/>
+    </g>
+
+    <!-- toe lines on feet -->
+    <g fill="none" stroke-width="9">
+      <path d="M 404 872 L 404 898"/>
+      <path d="M 444 870 L 444 900"/>
+      <path d="M 580 870 L 580 900"/>
+      <path d="M 620 872 L 620 898"/>
+    </g>
+  </g>
+</svg>

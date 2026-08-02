@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- background -->
+  <rect x="0" y="0" width="1024" height="1024" fill="#FFFFFF"/>
+
+  <g stroke="#3B2A1B" stroke-linejoin="round" stroke-linecap="round">
+    <!-- ear tufts (behind body) -->
+    <path d="M 262 168 L 400 300 L 278 352 Z" fill="#A06B3F" stroke-width="14"/>
+    <path d="M 762 168 L 624 300 L 746 352 Z" fill="#A06B3F" stroke-width="14"/>
+
+    <!-- body -->
+    <ellipse cx="512" cy="560" rx="295" ry="320" fill="#C68B59" stroke-width="16"/>
+
+    <!-- wings -->
+    <ellipse cx="272" cy="600" rx="86" ry="175" fill="#A06B3F" stroke-width="14" transform="rotate(14 272 600)"/>
+    <ellipse cx="752" cy="600" rx="86" ry="175" fill="#A06B3F" stroke-width="14" transform="rotate(-14 752 600)"/>
+
+    <!-- belly -->
+    <ellipse cx="512" cy="700" rx="180" ry="162" fill="#FBE8C6" stroke-width="14"/>
+    <!-- belly feather scallops -->
+    <g fill="none" stroke="#E0BE8C" stroke-width="10">
+      <path d="M 452 680 q 30 34 60 0"/>
+      <path d="M 512 680 q 30 34 60 0"/>
+      <path d="M 422 748 q 30 34 60 0"/>
+      <path d="M 482 748 q 30 34 60 0"/>
+      <path d="M 542 748 q 30 34 60 0"/>
+    </g>
+
+    <!-- face disc -->
+    <ellipse cx="512" cy="412" rx="238" ry="178" fill="#FBE8C6" stroke-width="14"/>
+
+    <!-- eyes -->
+    <circle cx="415" cy="405" r="92" fill="#FFFFFF" stroke-width="13"/>
+    <circle cx="609" cy="405" r="92" fill="#FFFFFF" stroke-width="13"/>
+    <circle cx="424" cy="416" r="44" fill="#3B2A1B" stroke="none"/>
+    <circle cx="600" cy="416" r="44" fill="#3B2A1B" stroke="none"/>
+    <circle cx="440" cy="400" r="15" fill="#FFFFFF" stroke="none"/>
+    <circle cx="616" cy="400" r="15" fill="#FFFFFF" stroke="none"/>
+    <circle cx="412" cy="432" r="7" fill="#FFFFFF" stroke="none"/>
+    <circle cx="588" cy="432" r="7" fill="#FFFFFF" stroke="none"/>
+
+    <!-- beak -->
+    <path d="M 478 486 Q 512 472 546 486 Q 540 542 512 560 Q 484 542 478 486 Z" fill="#F79E3D" stroke-width="12"/>
+
+    <!-- blush -->
+    <ellipse cx="322" cy="512" rx="38" ry="24" fill="#F7AFAF" stroke="none"/>
+    <ellipse cx="702" cy="512" rx="38" ry="24" fill="#F7AFAF" stroke="none"/>
+
+    <!-- feet -->
+    <g fill="#F79E3D" stroke-width="12">
+      <ellipse cx="392" cy="884" rx="21" ry="30"/>
+      <ellipse cx="424" cy="892" rx="21" ry="32"/>
+      <ellipse cx="456" cy="884" rx="21" ry="30"/>
+      <ellipse cx="568" cy="884" rx="21" ry="30"/>
+      <ellipse cx="600" cy="892" rx="21" ry="32"/>
+      <ellipse cx="632" cy="884" rx="21" ry="30"/>
+    </g>
+  </g>
+</svg>

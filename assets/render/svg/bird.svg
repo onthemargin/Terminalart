@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- background -->
+  <rect x="0" y="0" width="1024" height="1024" fill="#FFFFFF"/>
+
+  <g stroke="#2D3047" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- feet (drawn first, tucked under body) -->
+    <g fill="#FFA53B">
+      <path d="M 420 810 C 398 852 384 880 378 898 C 404 917 436 917 462 898 C 456 880 442 852 420 810 Z"/>
+      <path d="M 604 810 C 582 852 568 880 562 898 C 588 917 620 917 646 898 C 640 880 626 852 604 810 Z"/>
+    </g>
+    <g fill="none" stroke-width="10">
+      <path d="M 406 909 L 409 884"/>
+      <path d="M 434 909 L 431 884"/>
+      <path d="M 590 909 L 593 884"/>
+      <path d="M 618 909 L 615 884"/>
+    </g>
+
+    <!-- head tuft -->
+    <g fill="#62BBE8">
+      <path d="M 512 268 C 490 215 494 175 512 148 C 530 175 534 215 512 268 Z"/>
+      <path d="M 448 285 C 415 245 405 208 415 178 C 445 192 468 224 476 274 Z"/>
+      <path d="M 576 285 C 609 245 619 208 609 178 C 579 192 556 224 548 274 Z"/>
+    </g>
+
+    <!-- body -->
+    <ellipse cx="512" cy="545" rx="285" ry="305" fill="#62BBE8"/>
+
+    <!-- belly -->
+    <ellipse cx="512" cy="695" rx="180" ry="140" fill="#FFF6E0" stroke-width="12"/>
+
+    <!-- wings -->
+    <g fill="#3E9AD1">
+      <path d="M 300 420 C 220 450 178 530 180 620 C 182 700 220 740 262 740 C 312 740 340 680 342 590 C 344 510 330 450 300 420 Z"/>
+      <path d="M 724 420 C 804 450 846 530 844 620 C 842 700 804 740 762 740 C 712 740 684 680 682 590 C 680 510 694 450 724 420 Z"/>
+    </g>
+
+    <!-- eyes -->
+    <g>
+      <circle cx="420" cy="438" r="60" fill="#FFFFFF" stroke-width="12"/>
+      <circle cx="604" cy="438" r="60" fill="#FFFFFF" stroke-width="12"/>
+      <circle cx="426" cy="445" r="30" fill="#2D3047" stroke="none"/>
+      <circle cx="598" cy="445" r="30" fill="#2D3047" stroke="none"/>
+      <circle cx="437" cy="433" r="10" fill="#FFFFFF" stroke="none"/>
+      <circle cx="609" cy="433" r="10" fill="#FFFFFF" stroke="none"/>
+      <circle cx="416" cy="457" r="5" fill="#FFFFFF" stroke="none"/>
+      <circle cx="588" cy="457" r="5" fill="#FFFFFF" stroke="none"/>
+    </g>
+
+    <!-- cheeks -->
+    <g fill="#FFAABF" stroke="none">
+      <ellipse cx="348" cy="522" rx="40" ry="26"/>
+      <ellipse cx="676" cy="522" rx="40" ry="26"/>
+    </g>
+
+    <!-- beak -->
+    <path d="M 512 496 L 564 532 L 512 578 L 460 532 Z" fill="#FFAA33" stroke-width="12"/>
+  </g>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- background -->
+  <rect x="0" y="0" width="1024" height="1024" fill="#FFFFFF"/>
+
+  <g stroke="#33302E" stroke-width="14" stroke-linejoin="round" stroke-linecap="round">
+    <!-- tail fin -->
+    <path d="M 700 512
+             C 760 420, 830 360, 900 340
+             C 872 400, 866 460, 878 512
+             C 866 564, 872 624, 900 684
+             C 830 664, 760 604, 700 512 Z"
+          fill="#FF8A3D"/>
+    <!-- tail inner lines -->
+    <path d="M 758 470 C 800 440, 832 416, 858 398" fill="none" stroke-width="10"/>
+    <path d="M 758 554 C 800 584, 832 608, 858 626" fill="none" stroke-width="10"/>
+
+    <!-- dorsal fin -->
+    <path d="M 400 330
+             C 420 258, 500 218, 590 232
+             C 550 268, 534 306, 540 352
+             Z"
+          fill="#FF8A3D"/>
+
+    <!-- lower fin -->
+    <path d="M 470 700
+             C 460 764, 490 806, 548 822
+             C 540 776, 552 738, 584 706
+             Z"
+          fill="#FF8A3D"/>
+
+    <!-- body -->
+    <path d="M 160 512
+             C 160 400, 290 300, 460 300
+             C 620 300, 730 400, 730 512
+             C 730 624, 620 724, 460 724
+             C 290 724, 160 624, 160 512 Z"
+          fill="#FFB255"/>
+
+    <!-- belly -->
+    <path d="M 200 610
+             C 268 690, 380 726, 480 720
+             C 380 750, 260 716, 200 610 Z"
+          fill="#FFE0A8" stroke="none"/>
+
+    <!-- face stripe -->
+    <path d="M 560 312
+             C 610 372, 622 452, 606 512
+             C 622 572, 610 652, 560 712
+             C 620 668, 662 592, 662 512
+             C 662 432, 620 356, 560 312 Z"
+          fill="#FFFFFF" stroke-width="10"/>
+
+    <!-- pectoral fin -->
+    <path d="M 430 540
+             C 500 528, 556 552, 574 606
+             C 522 620, 462 604, 430 540 Z"
+          fill="#FF8A3D"/>
+  </g>
+
+  <!-- eye -->
+  <circle cx="318" cy="470" r="62" fill="#FFFFFF" stroke="#33302E" stroke-width="12"/>
+  <circle cx="306" cy="478" r="34" fill="#33302E"/>
+  <circle cx="318" cy="464" r="12" fill="#FFFFFF"/>
+
+  <!-- blush -->
+  <ellipse cx="240" cy="596" rx="34" ry="22" fill="#FF9B9B"/>
+
+  <!-- mouth -->
+  <path d="M 198 522 C 216 562, 268 568, 298 538"
+        fill="none" stroke="#33302E" stroke-width="13" stroke-linecap="round"/>
+</svg>

@@ -267,12 +267,23 @@ const artGallery = {
 // --- State ---
 const menuEl = document.getElementById('menu');
 const artEl = document.getElementById('ascii-art');
+const imgEl = document.getElementById('art-image');
 const factEl = document.getElementById('fun-fact');
 const drawPanel = document.getElementById('draw-panel');
 const drawGrid = document.getElementById('draw-grid');
 const galleryView = document.getElementById('gallery-view');
 
 let currentAnimal = null;
+
+// Show the pre-rendered illustration (assets/images/<animal>.png), hiding it
+// gracefully if the file is missing.
+function setArtImage(name) {
+    imgEl.hidden = true;
+    imgEl.onerror = () => { imgEl.hidden = true; };
+    imgEl.onload = () => { imgEl.hidden = false; };
+    imgEl.alt = `Illustration of a ${name.toLowerCase()}`;
+    imgEl.src = `assets/images/${name.toLowerCase()}.png`;
+}
 
 // --- Draw Your Own state ---
 const GRID_ROWS = 16;
@@ -311,6 +322,7 @@ function selectArt(name, element) {
     const selected = artGallery[name];
     artEl.textContent = selected.art;
     artEl.className = `ascii-art color-${selected.color}`;
+    setArtImage(name);
 
     // Random fun fact
     const fact = selected.funFacts[Math.floor(Math.random() * selected.funFacts.length)];
@@ -332,6 +344,7 @@ function showDrawMode(element) {
     galleryView.style.display = 'none';
     drawPanel.style.display = 'flex';
     factEl.style.display = 'none';
+    imgEl.hidden = true;
 
     initGrid();
 }
@@ -425,6 +438,7 @@ const firstName = Object.keys(artGallery)[0];
 currentAnimal = firstName;
 artEl.textContent = artGallery[firstName].art;
 artEl.className = `ascii-art color-${artGallery[firstName].color}`;
+setArtImage(firstName);
 const firstFact = artGallery[firstName].funFacts[Math.floor(Math.random() * artGallery[firstName].funFacts.length)];
 factEl.textContent = `💡 ${firstFact}`;
 factEl.style.display = 'block';

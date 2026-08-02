@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- background -->
+  <rect x="0" y="0" width="1024" height="1024" fill="#FFFFFF"/>
+
+  <g transform="translate(512 526) scale(1.12) translate(-512 -526)">
+    <!-- hind feet peeking out at the sides -->
+    <g fill="#6FCF4F" stroke="#2D2A26" stroke-width="11">
+      <ellipse cx="280" cy="795" rx="85" ry="48" transform="rotate(-14 280 795)"/>
+      <ellipse cx="744" cy="795" rx="85" ry="48" transform="rotate(14 744 795)"/>
+    </g>
+    <!-- hind toe grooves -->
+    <g stroke="#2D2A26" stroke-width="8" stroke-linecap="round" fill="none">
+      <path d="M 240 828 L 248 800"/>
+      <path d="M 272 838 L 276 806"/>
+      <path d="M 784 828 L 776 800"/>
+      <path d="M 752 838 L 748 806"/>
+    </g>
+
+    <!-- body -->
+    <ellipse cx="512" cy="580" rx="300" ry="250" fill="#6FCF4F" stroke="#2D2A26" stroke-width="12"/>
+
+    <!-- belly -->
+    <ellipse cx="512" cy="685" rx="190" ry="120" fill="#EAF6C9"/>
+
+    <!-- front feet -->
+    <g fill="#6FCF4F" stroke="#2D2A26" stroke-width="11">
+      <ellipse cx="415" cy="815" rx="55" ry="42"/>
+      <ellipse cx="609" cy="815" rx="55" ry="42"/>
+    </g>
+    <!-- front toe grooves -->
+    <g stroke="#2D2A26" stroke-width="8" stroke-linecap="round" fill="none">
+      <path d="M 398 850 L 398 820"/>
+      <path d="M 432 850 L 432 820"/>
+      <path d="M 592 850 L 592 820"/>
+      <path d="M 626 850 L 626 820"/>
+    </g>
+
+    <!-- mouth -->
+    <path d="M 398 498 Q 512 592 626 498" fill="none" stroke="#2D2A26" stroke-width="14" stroke-linecap="round"/>
+
+    <!-- nostrils -->
+    <circle cx="482" cy="443" r="7" fill="#2D2A26"/>
+    <circle cx="542" cy="443" r="7" fill="#2D2A26"/>
+
+    <!-- cheeks -->
+    <ellipse cx="348" cy="512" rx="42" ry="26" fill="#FFAEC0"/>
+    <ellipse cx="676" cy="512" rx="42" ry="26" fill="#FFAEC0"/>
+
+    <!-- eyes -->
+    <g>
+      <circle cx="395" cy="300" r="105" fill="#6FCF4F" stroke="#2D2A26" stroke-width="12"/>
+      <circle cx="629" cy="300" r="105" fill="#6FCF4F" stroke="#2D2A26" stroke-width="12"/>
+      <circle cx="395" cy="308" r="70" fill="#FFFFFF" stroke="#2D2A26" stroke-width="9"/>
+      <circle cx="629" cy="308" r="70" fill="#FFFFFF" stroke="#2D2A26" stroke-width="9"/>
+      <circle cx="399" cy="318" r="32" fill="#2D2A26"/>
+      <circle cx="625" cy="318" r="32" fill="#2D2A26"/>
+      <circle cx="388" cy="306" r="11" fill="#FFFFFF"/>
+      <circle cx="614" cy="306" r="11" fill="#FFFFFF"/>
+    </g>
+  </g>
+</svg>

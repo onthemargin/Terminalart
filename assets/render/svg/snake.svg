@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- background -->
+  <rect x="0" y="0" width="1024" height="1024" fill="#FFFFFF"/>
+
+  <g stroke="#2E3140" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <!-- tail curling out from behind the bottom coil (left side) -->
+    <path d="M 300 790
+             C 205 802 146 772 144 714
+             C 143 670 178 646 214 660"
+          fill="none" stroke="#2E3140" stroke-width="72"/>
+    <path d="M 300 790
+             C 205 802 146 772 144 714
+             C 143 670 178 646 214 660"
+          fill="none" stroke="#6FBF5A" stroke-width="44"/>
+
+    <!-- bottom coil -->
+    <ellipse cx="512" cy="762" rx="308" ry="118" fill="#6FBF5A"/>
+    <!-- middle coil -->
+    <ellipse cx="512" cy="642" rx="256" ry="102" fill="#6FBF5A"/>
+    <!-- top coil -->
+    <ellipse cx="512" cy="534" rx="200" ry="86" fill="#6FBF5A"/>
+
+    <!-- head -->
+    <ellipse cx="512" cy="318" rx="182" ry="160" fill="#6FBF5A"/>
+
+    <!-- spots on the coils -->
+    <g fill="#A8DC8C" stroke-width="10">
+      <circle cx="360" cy="756" r="30"/>
+      <circle cx="512" cy="792" r="26"/>
+      <circle cx="662" cy="750" r="30"/>
+      <circle cx="410" cy="646" r="24"/>
+      <circle cx="610" cy="640" r="24"/>
+      <circle cx="512" cy="556" r="22"/>
+    </g>
+
+    <!-- eyes -->
+    <g>
+      <circle cx="443" cy="292" r="52" fill="#FFFFFF"/>
+      <circle cx="581" cy="292" r="52" fill="#FFFFFF"/>
+      <circle cx="450" cy="300" r="22" fill="#2E3140" stroke="none"/>
+      <circle cx="574" cy="300" r="22" fill="#2E3140" stroke="none"/>
+      <circle cx="458" cy="292" r="8" fill="#FFFFFF" stroke="none"/>
+      <circle cx="582" cy="292" r="8" fill="#FFFFFF" stroke="none"/>
+    </g>
+
+    <!-- cheeks -->
+    <g fill="#F7A6B4" stroke="none">
+      <ellipse cx="378" cy="366" rx="30" ry="20"/>
+      <ellipse cx="646" cy="366" rx="30" ry="20"/>
+    </g>
+
+    <!-- smile -->
+    <path d="M 462 372 C 490 400 534 400 562 372" fill="none"/>
+
+    <!-- nostrils -->
+    <g fill="#2E3140" stroke="none">
+      <circle cx="492" cy="346" r="6"/>
+      <circle cx="532" cy="346" r="6"/>
+    </g>
+
+    <!-- little forked tongue -->
+    <path d="M 512 394 L 512 428 M 512 428 L 498 446 M 512 428 L 526 446"
+          fill="none" stroke="#E75A70" stroke-width="12"/>
+  </g>
+</svg>

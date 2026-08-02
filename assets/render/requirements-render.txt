@@ -1,0 +1,4 @@
+# Dev-only deps for regenerating assets/images/ (not needed at runtime).
+# Step 2 (render_svg.py) additionally needs headless Chromium on PATH.
+opencv-python-headless>=4.8
+numpy>=1.24
